@@ -1,0 +1,273 @@
+@import url('https://fonts.googleapis.com/css2?family=Overpass:wght@200;300;400;700&display=swap');
+
+$bg-color: #131518;
+$container-bg: radial-gradient(98.96% 98.96% at 50% 0%, #232a34 0%, #181e27 100%);
+$orange: rgba(252, 118, 20, 1);
+$white: rgba(255, 255, 255, 1);
+$medium-grey: rgba(124, 135, 152, 1);
+$dark-blue: rgba(38, 46, 56, 1);
+
+a {
+  text-decoration: none;
+}
+
+.overpass200 {
+  font-family: 'Overpass', sans-serif;
+  font-style: normal;
+  font-weight: 200;
+}
+
+.overpass300 {
+  font-family: 'Overpass', sans-serif;
+  font-style: normal;
+  font-weight: 300;
+}
+
+.overpass400 {
+  font-family: 'Overpass', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+}
+
+.overpass700 {
+  font-family: 'Overpass', sans-serif;
+  font-style: normal;
+  font-weight: 700;
+}
+
+.btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 341px;
+  width: 100%;
+  height: 45px;
+  background: $orange;
+  color: $white;
+  font-family: Overpass;
+  font-size: 0.9375rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: 0.125rem;
+  border-radius: 1.40625rem;
+  transition: 0.4s;
+}
+
+.btn:hover {
+  transition: 0.4s;
+  background: $white;
+  color: $orange;
+}
+
+.attribution {
+  margin-top: 15px;
+  font-size: 11px;
+  text-align: center;
+  color: $dark-blue;
+  a {
+    color: $medium-grey;
+    transition: 0.4s;
+  }
+
+  a:hover {
+    color: $orange;
+    transition: 0.4s;
+  }
+}
+
+/*
+  1. Use a more-intuitive box-sizing model.
+*/
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+/*
+  2. Remove default margin
+*/
+* {
+  margin: 0;
+}
+/*
+  Typographic tweaks!
+  3. Add accessible line-height
+  4. Improve text rendering
+*/
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  height: 100%;
+}
+
+html {
+  height: 100%;
+}
+/*
+  5. Improve media defaults
+*/
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+/*
+  6. Remove built-in form typography styles
+*/
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+/*
+  7. Avoid text overflows
+*/
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+/*
+  8. Create a root stacking context
+*/
+#root,
+#__next {
+  isolation: isolate;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: $bg-color;
+  width: 100%;
+  height: 100%;
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    max-width: 412px;
+    width: 100%;
+    height: 416px;
+    background: $container-bg;
+    border-radius: 1.875rem;
+    margin: 0px 30px 0px 30px;
+    padding: 32px 35.5px 32px 35.5px;
+
+    .star-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 3rem;
+      height: 3rem;
+      background: $dark-blue;
+      border-radius: 30px;
+    }
+
+    h1 {
+      color: $white;
+      font-size: 1.75rem;
+    }
+
+    p {
+      font-feature-settings: 'clig' off, 'liga' off;
+      color: $medium-grey;
+      font-size: 0.9375rem;
+      line-height: 1.5rem;
+    }
+
+    .review-buttons {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      button {
+        cursor: pointer;
+        border: none;
+        font-size: 1rem;
+        line-height: 1.5rem;
+        letter-spacing: 0.0125rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 30px;
+        min-width: 3.1875rem;
+        width: 3.1875rem;
+        height: 3.1875rem;
+        color: $medium-grey;
+        background: $dark-blue;
+        transition: 0.4s;
+      }
+
+      button:hover {
+        transition: 0.4s;
+        background: $orange;
+        color: $white;
+      }
+
+      .review-button-selected {
+        background-color: $medium-grey;
+        color: $white;
+        transition: 0.4s;
+      }
+    }
+
+    .submit-btn {
+      cursor: pointer;
+      letter-spacing: 0.125rem;
+      font-size: 0.9375rem;
+    }
+  }
+
+  .submitted-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    max-width: 412px;
+    background: $container-bg;
+    width: 100%;
+    height: 416px;
+    border-radius: 1.875rem;
+    margin: 0px 30px 0px 30px;
+    padding: 45px 36px 45px 36px;
+    transition: 0.4s;
+
+    .selection-p {
+      color: $orange;
+      padding: 4px 19.5px 4px 19.5px;
+      background: $dark-blue;
+      border-radius: 30px;
+      font-size: 0.9375rem;
+      line-height: 1.5rem;
+    }
+
+    h1 {
+      color: $white;
+      font-size: 1.75rem;
+      line-height: normal;
+    }
+
+    .apreciate-p {
+      color: $medium-grey;
+      font-size: 0.9375rem;
+      line-height: 1.5rem;
+    }
+  }
+
+  .display-none {
+    display: none !important;
+  }
+}
