@@ -114,7 +114,11 @@ main {
   display: flex;
 }
 
-main .container {
+main .wrapper {
+  margin: 0 40px;
+}
+
+main .wrapper .container {
   background: radial-gradient(98.96% 98.96% at 50% 0, #232a34 0%, #181e27 100%);
   border-radius: 1.875rem;
   flex-direction: column;
@@ -122,12 +126,11 @@ main .container {
   width: 100%;
   max-width: 412px;
   height: 416px;
-  margin: 0 30px;
   padding: 32px 35.5px;
   display: flex;
 }
 
-main .container .star-container {
+main .wrapper .container .star-container {
   background: #262e38;
   border-radius: 30px;
   justify-content: center;
@@ -137,25 +140,25 @@ main .container .star-container {
   display: flex;
 }
 
-main .container h1 {
+main .wrapper .container h1 {
   color: #fff;
   font-size: 1.75rem;
 }
 
-main .container p {
+main .wrapper .container p {
   font-feature-settings: "clig" off, "liga" off;
   color: #7c8798;
   font-size: .9375rem;
   line-height: 1.5rem;
 }
 
-main .container .review-buttons {
+main .wrapper .container .review-buttons {
   justify-content: space-between;
   align-items: center;
   display: flex;
 }
 
-main .container .review-buttons button {
+main .wrapper .container .review-buttons button {
   cursor: pointer;
   letter-spacing: .0125rem;
   color: #7c8798;
@@ -173,25 +176,25 @@ main .container .review-buttons button {
   display: flex;
 }
 
-main .container .review-buttons button:hover {
+main .wrapper .container .review-buttons button:hover {
   color: #fff;
   background: #fc7614;
   transition: all .4s;
 }
 
-main .container .review-buttons .review-button-selected {
+main .wrapper .container .review-buttons .review-button-selected {
   color: #fff;
   background-color: #7c8798;
   transition: all .4s;
 }
 
-main .container .submit-btn {
+main .wrapper .container .submit-btn {
   cursor: pointer;
   letter-spacing: .125rem;
   font-size: .9375rem;
 }
 
-main .submitted-container {
+main .wrapper .submitted-container {
   text-align: center;
   background: radial-gradient(98.96% 98.96% at 50% 0, #232a34 0%, #181e27 100%);
   border-radius: 1.875rem;
@@ -207,7 +210,7 @@ main .submitted-container {
   display: flex;
 }
 
-main .submitted-container .selection-p {
+main .wrapper .submitted-container .selection-p {
   color: #fc7614;
   background: #262e38;
   border-radius: 30px;
@@ -216,13 +219,13 @@ main .submitted-container .selection-p {
   line-height: 1.5rem;
 }
 
-main .submitted-container h1 {
+main .wrapper .submitted-container h1 {
   color: #fff;
   font-size: 1.75rem;
   line-height: normal;
 }
 
-main .submitted-container .apreciate-p {
+main .wrapper .submitted-container .apreciate-p {
   color: #7c8798;
   font-size: .9375rem;
   line-height: 1.5rem;
